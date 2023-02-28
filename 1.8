@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+struct duongthang{
+	int a;
+	int b;
+	int c;
+};
+void nhapduongthang(duongthang &l){
+	cout <<"Nhap c"<< endl;
+	cin >>l.c ;
+	do {
+		cout << "Nhap a va b: " << endl;
+		cin>> l.a >> l.b;
+	} while(l.a*l.a + l.b*l.b == 0);
+}
+void xuatduongthang(duongthang l){
+	cout <<l.a<<"x + "<<l.b<<"y + "<<l.c<<"=0"<<endl;
+}
+int main(){
+	duongthang l;
+	nhapduongthang(l);
+	xuatduongthang(l);
+	return 0;
+}
